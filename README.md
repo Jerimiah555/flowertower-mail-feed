@@ -77,6 +77,8 @@ Optional `gates` can limit broad public broadcasts:
 
 Keep gates simple. If a message needs per-player targeting or support compensation, it does not belong in this public feed.
 
+Supported app environments are `debug`, `preview`, and `production`.
+
 ## Feed Shape
 
 The live file is always:

@@ -20,7 +20,7 @@ const REWARD_AMOUNT_FIELDS = ["gems", "pollen", "wildDNA", "strandDNA", "bloomGr
 const ALLOWED_VARIANTS = new Set(["mass", "velocity", "sporeburst", "tangle"]);
 const ALLOWED_GATE_FIELDS = new Set(["platforms", "appEnvironments", "minBuildNumber", "maxBuildNumber"]);
 const ALLOWED_PLATFORMS = new Set(["ios", "android", "web"]);
-const ALLOWED_ENVIRONMENTS = new Set(["development", "preview", "production"]);
+const ALLOWED_ENVIRONMENTS = new Set(["debug", "preview", "production"]);
 
 function isPlainObject(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);

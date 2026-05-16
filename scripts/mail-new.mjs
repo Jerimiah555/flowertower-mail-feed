@@ -13,7 +13,7 @@ const REWARD_PROMPTS = [
 
 const VARIANTS = new Set(["mass", "velocity", "sporeburst", "tangle"]);
 const PLATFORMS = new Set(["ios", "android", "web"]);
-const ENVIRONMENTS = new Set(["development", "preview", "production"]);
+const ENVIRONMENTS = new Set(["debug", "preview", "production"]);
 
 function slugify(value) {
   return value
@@ -156,7 +156,7 @@ async function main() {
     }
 
     const appEnvironments = parseList(
-      await rl.question("App environments (development,preview,production; blank = all): "),
+      await rl.question("App environments (debug,preview,production; blank = all): "),
       "App environments",
       ENVIRONMENTS
     );

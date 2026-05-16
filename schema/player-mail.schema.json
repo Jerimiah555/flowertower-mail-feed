@@ -96,7 +96,7 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "enum": ["development", "preview", "production"]
+            "enum": ["debug", "preview", "production"]
           },
           "uniqueItems": true
         },
