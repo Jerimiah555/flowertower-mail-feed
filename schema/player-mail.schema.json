@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Jerimiah555/flowertower-mail-feed/main/schema/player-mail.schema.json",
+  "title": "Flower Tower Player Mail Feed",
+  "type": "object",
+  "required": ["schemaVersion", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/mailItem"
+      }
+    }
+  },
+  "$defs": {
+    "mailItem": {
+      "type": "object",
+      "required": ["id", "title", "body", "publishedAt"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{2,80}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 600
+        },
+        "publishedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "startsAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expiresAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reward": {
+          "$ref": "#/$defs/reward"
+        },
+        "gates": {
+          "$ref": "#/$defs/gates"
+        }
+      }
+    },
+    "reward": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gems": {
+          "$ref": "#/$defs/positiveInteger"
+        },
+        "pollen": {
+          "$ref": "#/$defs/positiveInteger"
+        },
+        "wildDNA": {
+          "$ref": "#/$defs/positiveInteger"
+        },
+        "strandDNA": {
+          "$ref": "#/$defs/positiveInteger"
+        },
+        "bloomGrowth": {
+          "$ref": "#/$defs/positiveInteger"
+        },
+        "bloomGrowthVariantId": {
+          "enum": ["mass", "velocity", "sporeburst", "tangle"]
+        }
+      }
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "platforms": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": ["ios", "android", "web"]
+          },
+          "uniqueItems": true
+        },
+        "appEnvironments": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": ["development", "preview", "production"]
+          },
+          "uniqueItems": true
+        },
+        "minBuildNumber": {
+          "$ref": "#/$defs/positiveInteger"
+        },
+        "maxBuildNumber": {
+          "$ref": "#/$defs/positiveInteger"
+        }
+      }
+    },
+    "positiveInteger": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

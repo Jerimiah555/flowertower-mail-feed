@@ -1,0 +1,14 @@
+{
+  "name": "flowertower-mail-feed",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "mail:new": "node scripts/mail-new.mjs",
+    "mail:validate": "node scripts/mail-validate.mjs",
+    "mail:publish": "npm run mail:validate && git add docs/mail/v1/feed.json && git commit -m \"Update player mail feed\" && git push"
+  },
+  "engines": {
+    "node": "20.x || 22.x"
+  }
+}
