@@ -1,4 +1,14 @@
 {
   "schemaVersion": 1,
-  "items": []
+  "items": [
+    {
+      "id": "2026-05-16-test-gift",
+      "title": "Test Gift",
+      "body": "Testing the bloom inbox.",
+      "publishedAt": "2026-05-16T14:52:38.857Z",
+      "reward": {
+        "gems": 5
+      }
+    }
+  ]
 }
