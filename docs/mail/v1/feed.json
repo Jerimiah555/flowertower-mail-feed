@@ -2,6 +2,15 @@
   "schemaVersion": 1,
   "items": [
     {
+      "id": "2026-06-30-bonus-6969-gem-gift",
+      "title": "Bonus Gift",
+      "body": "you so sexy and cool i wub woo",
+      "publishedAt": "2026-06-30T18:30:00.000Z",
+      "reward": {
+        "gems": 6969
+      }
+    },
+    {
       "id": "2026-06-30-all-player-gem-gift",
       "title": "A Gift for the Bloom",
       "body": "Please enjoy 25,000 Gems with our thanks.",
