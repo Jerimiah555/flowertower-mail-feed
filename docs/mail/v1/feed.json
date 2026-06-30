@@ -2,6 +2,15 @@
   "schemaVersion": 1,
   "items": [
     {
+      "id": "2026-06-30-all-player-gem-gift",
+      "title": "A Gift for the Bloom",
+      "body": "Please enjoy 25,000 Gems with our thanks.",
+      "publishedAt": "2026-06-30T16:39:28.000Z",
+      "reward": {
+        "gems": 25000
+      }
+    },
+    {
       "id": "2026-05-16-test-gift",
       "title": "Test Gift",
       "body": "Testing the bloom inbox.",
